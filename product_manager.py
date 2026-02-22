@@ -79,3 +79,16 @@ def xoa_san_pham(cac_san_pham):
             return cac_san_pham
     print("Không tìm thấy sản phẩm với ID đã cho.")
     return cac_san_pham
+def tim_san_pham(cac_san_pham):
+    print("Tìm kiếm sản phẩm:")
+    sp_ten = input("Nhập tên sản phẩm cần tìm: ").strip().lower()
+    ket_qua = []
+    for p in cac_san_pham:
+        if sp_ten in p['ten'].lower():
+            ket_qua.append(p)
+    if ket_qua:
+        print("Kết quả tìm kiếm:")
+        for sp in ket_qua:
+            print(sp)
+    else:
+        print("Không tìm thấy sản phẩm nào phù hợp.")
