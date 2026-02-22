@@ -40,3 +40,32 @@ def add_product(cac_san_pham):
     cac_san_pham.append(new_product)
     print("Đã thêm sản phẩm thành công.")
     return cac_san_pham
+def cap_nhat_san_pham(cac_san_pham):
+
+    print("Cap nhật sản phẩm:")
+    sp_id = input("Nhập ID sản phẩm cần cập nhật: ").strip().upper()
+    for p in cac_san_pham:
+        if p['id'] == sp_id:
+            print(f"Sản phẩm hiện tại: {p}")
+            name = input("Tên sản phẩm mới (để trống nếu không đổi): ")
+            brand = input("Thương hiệu mới (để trống nếu không đổi): ")
+            gia_ban_input = input("Giá bán mới (để trống nếu không đổi): ")
+            so_luong_input = input("Số lượng mới (để trống nếu không đổi): ")
+            if name:
+                p['ten'] = name
+            if brand:
+                p['brand'] = brand
+            if gia_ban_input:
+                try:
+                    p['gia'] = float(gia_ban_input)
+                except ValueError:
+                    print("Giá bán phải là số. Cập nhật giá bán bị bỏ qua.")
+            if so_luong_input:
+                try:
+                    p['sl'] = int(so_luong_input)
+                except ValueError:
+                    print("Số lượng phải là số nguyên. Cập nhật số lượng bị bỏ qua.")
+            print("Đã cập nhật sản phẩm thành công.")
+            return cac_san_pham
+    print("Không tìm thấy sản phẩm với ID đã cho.")
+    return cac_san_pham
