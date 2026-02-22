@@ -92,3 +92,7 @@ def tim_san_pham(cac_san_pham):
             print(sp)
     else:
         print("Không tìm thấy sản phẩm nào phù hợp.")
+def hien_thi_san_pham(cac_san_pham):
+    print("Danh sách sản phẩm:")
+    for p in cac_san_pham:
+        print(p)
