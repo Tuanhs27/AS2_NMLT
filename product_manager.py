@@ -7,3 +7,7 @@ def load_data():
             return json.load(f)
     except FileNotFoundError:
         return []
+def save_data(cac_san_pham):
+
+    with open(FILE_NAME,'w',encoding='utf-8') as f:
+        json.dump(cac_san_pham,f,indent=4)
