@@ -42,6 +42,7 @@ def add_product(cac_san_pham):
     cac_san_pham.append(new_product)
     print("Đã thêm sản phẩm thành công.")
     return cac_san_pham
+#Tú sửa
 def cap_nhat_san_pham(cac_san_pham):
 
     print("Cap nhật sản phẩm:")
