@@ -1,5 +1,5 @@
 import product_manager as pm
-
+#Viết hàm funtion để chạy giao diện
 def main():
     cac_san_pham = pm.load_data()
     while True:
