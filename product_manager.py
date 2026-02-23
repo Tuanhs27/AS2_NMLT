@@ -12,6 +12,7 @@ def save_data(cac_san_pham):
 
     with open(FILE_NAME,'w',encoding='utf-8') as f:
         json.dump(cac_san_pham,f,indent=4)
+#Thêm sản phẩm
 def add_product(cac_san_pham):
     print("Thêm data sản phẩm mới:")
     name = input("Tên sản phẩm: ")
