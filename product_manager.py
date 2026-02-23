@@ -1,6 +1,6 @@
 import json
 FILE_NAME = 'cac_san_pham.json'
-
+# Định nghĩa các hàm quản lý sản phẩm
 def load_data():
     try:
         with open(FILE_NAME,'r',encoding='utf-8') as f:
