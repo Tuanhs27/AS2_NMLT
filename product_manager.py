@@ -71,6 +71,7 @@ def cap_nhat_san_pham(cac_san_pham):
             return cac_san_pham
     print("Không tìm thấy sản phẩm với ID đã cho.")
     return cac_san_pham
+#thêm hàm xóa sản phẩm
 def xoa_san_pham(cac_san_pham):
     print("Xóa sản phẩm:")
     sp_id = input("Nhập ID sản phẩm cần xóa: ").strip().upper()
